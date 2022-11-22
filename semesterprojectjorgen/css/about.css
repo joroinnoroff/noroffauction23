@@ -1,0 +1,318 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+font-family: 'Trispace', sans-serif;
+
+}
+
+
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  
+  position:relative;
+  
+  
+  align-items: center;
+  justify-content: flex-start;
+
+ 
+  
+}
+
+nav{
+  width: 100%;
+
+  padding: 19px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #cccc;
+}
+
+nav .logo{
+  width: 158px;
+  background: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  -webkit-text-stroke: 1px #23430C;
+  text-shadow: -1px 1px 2px #23430c, 1px 1px 2px #23430c, 1px -1px 0 #23430c, -1px -1px 0 #23430c;
+  border: 1px solid;
+}
+
+
+nav ul li{
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 40px;
+  border: 1px solid;
+  border-radius: 50px;
+    padding: 14px 22px;
+    background-color: #ccc;
+}
+
+nav ul li:hover{
+  background-color: rgba(12,3,51,0.3);
+  transition: 0.4s;
+}
+
+
+button:hover{
+  background-color: rgba(12,3,51,0.3);
+  transition: 0.4s;
+  color: #fff;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  transition: 0.4s;
+}
+nav ul li a:hover{
+  color: #FFF;
+}
+
+.content{
+  text-align: center;
+
+}
+.content h1{
+
+  font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  font-size: 78px;
+  text-shadow: -3px 3px 0 #000, 2px 2px 0 #000, 1px -2px 0 #000;
+}
+
+
+
+.content a{
+  text-decoration: none;
+  display: inline-block;
+  font-size: 38px;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 14px 70px;
+  margin-top: 20px;
+  color: black;
+  background-color: #ccc;
+}
+.content a:hover{
+  background-color: white;
+  transition: 0.4s;
+}
+
+.back-video{
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9){
+  .back-video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9){
+  .back-video{
+    width: auto;
+    height: 100%;
+  }
+}
+
+/**Hamburger Css **/
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: var(--light);
+  border-radius: 6px;
+  z-index: 1;
+
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: var(--primary);
+}
+.hamburger.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+/*this is ht make color change once clicked */
+.hamburger.is-active:hover span {
+  background-color: var(--primary);
+}
+/*this is ht make color change once clicked */
+
+.menu {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -16px;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+/*this is ht make a listed items white color and better spacing*/
+.menu a {
+  color: #ffff;
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+/*Gives color to primary a and hover childtags*/
+.menu a.is-active,
+.menu a:hover {
+  background-color: var(--primary);
+}
+
+/*this is ht make hamburger disapear after certain witdth */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+    display: flex;
+  }
+}
+/*this is ht make hamburger disapear after certain witdth */
+
+
+
+
+.middlecon{
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url(/img/bg-conab\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 95vh;
+
+  
+}
+
+.midtext{
+  color: #fff;
+}
+
+
+
+h1{
+  border-bottom: 1px solid;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+h2{
+  max-width: 500px;
+  margin: 20px 0;
+  
+}
+
+
+/*contact button */ 
+
+div.conbtn{
+  padding: 4rem;
+  
+}
+.cont{
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 21px 45px;
+  font-size: 2em;
+  background-color: #ccc;
+  
+  
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgba(12,3,51,0.3);
+  transition: 0.4s;
+  color: #fff;
+}
+
+/*social Icons*/
+.sociali{
+  
+  font-size: 2em;
+  padding: 1rem;
+  color: #FFF;
+  border-bottom: 4px solid;
+  
+}
+
+.sicon{
+  font-size: 3em;
+}
+
+.fa{
+  text-decoration: none;
+  color: #000;
+
+ 
+  padding: 1rem;
+  
+  
+  
+}
+
+
+
+.fa:hover{
+  color: #FFF;
+}
+
+
+.fot{
+ background-color: #000;
+ color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

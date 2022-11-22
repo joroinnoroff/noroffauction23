@@ -1,0 +1,403 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+}
+
+
+
+
+.hero{
+  width: 100%;
+  height: 88vh;
+  
+  position:relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Trispace', sans-serif;
+  
+}
+
+nav .logo{
+  width: 158px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    -webkit-text-stroke: 1px #23430C;
+    text-shadow: -1px 1px 2px #23430c, 1px 1px 2px #23430c, 1px -1px 0 #23430c, -1px -1px 0 #23430c;
+    border: 1px solid;
+}
+
+
+nav ul li{
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 40px;
+  border: 1px solid;
+  border-radius: 50px;
+    padding: 14px 22px;
+    background-color: #ccc;
+}
+
+nav ul li:hover{
+  background-color: rgba(12,3,51,0.3);
+  
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  transition: 0.4s;
+}
+nav ul li a:hover{
+  color: #FFF;
+}
+
+
+a{
+  text-decoration: none;
+
+}
+.box{
+	width:300px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 25px;
+}
+.slide-img{
+	height: 350px;
+	position:relative;
+}
+.slide-img img{
+	width:100%;
+	height: 100%;
+	object-fit: contain;
+	box-sizing: border-box;
+}
+.detail-box{
+	width: 100%;
+display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	font-family: calibri;
+}
+.type{
+	display: flex;
+	flex-direction: column;
+}
+.type a{
+	color:#222222;
+	margin: 5px 0px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	padding-right: 8px;
+}
+.type span{
+	color:rgba(26,26,26,0.5);
+}
+
+
+.cs-hidden{
+  margin-top: 10rem;
+}
+
+
+
+.prodtext{
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+
+/**Hamburger Css **/
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: var(--dark);
+  border-radius: 6px;
+  z-index: 1;
+
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: var(--primary);
+}
+.hamburger.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+/*this is ht make color change once clicked */
+.hamburger.is-active:hover span {
+  background-color: var(--primary);
+}
+/*this is ht make color change once clicked */
+
+
+
+/*this is ht make hamburger disapear after certain witdth */
+@media (min-width: 968px){
+  .hamburger {
+    display: none;}
+    
+
+}
+/*this is ht make hamburger disapear after certain witdth */
+
+@media (max-width: 968px){
+  .hidethis {
+    display: none;}
+   
+    
+
+}
+
+/*back button*/
+.backbtn{
+  margin-bottom: 25rem;
+}
+
+
+
+
+.prodtext{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+h1{
+  border-bottom: 4px solid;
+  font-family: 'Roboto', sans-serif;
+
+}
+/*add to cart button and size selection*/
+form{
+  
+  display: flex;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+@keyframes moveButton {
+  50% {
+    width: 370px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+.button {
+  position: relative;
+  height: 100px;
+  width: 25rem;
+  border-radius: 50px;
+  background-color: #315659;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+  overflow: hidden;
+}
+
+.buttonAnimation {
+   animation: 0.6s moveButton ease-in-out 0.5s;
+}
+
+@keyframes moveAdded {
+  0% {
+    visibility: visible;
+    font-size: 0px;
+  }
+  50% {
+    visibility: visible;
+    font-size: 30px;
+  }
+  100% {
+    visibility: visible;
+    font-size: 35px;
+  }
+}
+
+.button Animation::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  content: 'Added';
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Noto Sans JP', sans-serif; 
+  animation: 0.6s moveAdded ease-out 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.cart {
+  fill: white;
+}
+
+@keyframes moveCart {
+  10% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(-2deg) translate(30px, 0px);
+  }
+  100% {
+    transform: rotate(0deg) translate(350px, 0px);
+    visibility: hidden;
+  }
+}
+
+.cartAnimation {
+  animation: 0.5s moveCart ease-in;  
+    animation-fill-mode: forwards;
+
+}
+
+.text {
+  position: relative;
+  color: white;
+  font-size: 35px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: bold;
+  margin-left: 15px;
+  text-transform: uppercase;
+}
+
+.text::before {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 20px;
+  background-color: white;
+  top: 25px;
+  left : -80px;
+}
+
+.text::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 20px;
+  background-color: white;
+  top: 25px;
+  left : -80px;
+  transform: rotate(90deg);
+}
+
+@keyframes moveText {
+  10% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(350px, 0px);
+    visibility: hidden;
+  }
+}
+
+.textAnimation {
+  animation: 0.5s moveText ease-in;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes moveFirstSign {
+  5% {
+    top: 15px;
+  }
+  60% {
+    left: -200px;
+    width: 100px;
+  }
+  100% {
+    top: 15px;
+    left: -280px;
+    width: 200px;
+    visibility: hidden;
+  }
+}
+
+.textAnimation::before {
+  animation: 0.5s moveFirstSign ease-in;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes moveSecondSign {
+  5% {
+    transform: rotate(180deg);
+    top: 30px;
+    left: -75px;
+  }
+  60% {
+    transform: rotate(180deg);
+    left: -155px;
+    top: 30px;
+    width: 80px;
+  }
+  100% {
+    width: 170px;
+    top: 30px;
+    left: -245px;
+    transform: rotate(180deg);
+    visibility: hidden;
+  }
+}
+
+.textAnimation::after {
+  animation: 0.5s moveSecondSign ease-in;
+    animation-fill-mode: forwards;
+
+}
